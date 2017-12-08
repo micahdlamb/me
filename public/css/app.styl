@@ -1,0 +1,173 @@
+// OVERRIDE BOOTSTRAP //////////////////////////////////////////////////////////
+
+// ALL /////////////////////////////////////////////////////////////////////////
+a
+	cursor: pointer
+
+.page-header
+	margin-top 0
+
+// For ui.bootstrap
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+// Angular Animations///////////////////////////////////////////////////////////
+
+.ng-enter,
+.ng-leave,
+.ng-move {
+	-webkit-transition: all linear .5s;
+	-moz-transition: all linear .5s;
+	-o-transition: all linear .5s;
+	transition: all linear .5s;
+		 
+	//position:relative;
+	//left:5px;
+}
+.ng-enter {
+	opacity: 0;
+}
+.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+.ng-leave {
+	//opacity: 1;
+	opacity: 0;
+}
+.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+.ng-move {
+	left:2px;
+	opacity: 0.5;
+}
+.ng-move.ng-move-active {
+	left:0;
+	opacity: 1;
+}
+
+// OFF CANVAS //////////////////////////////////////////////////////////////////
+@media screen and (max-width: 767px) {
+	.row-offcanvas {
+		position: relative;
+		-webkit-transition: all .25s ease-out;
+				 -o-transition: all .25s ease-out;
+						transition: all .25s ease-out;
+	}
+
+	.row-offcanvas-right {
+		right: 0;
+	}
+
+	.row-offcanvas-left {
+		left: 0;
+	}
+
+	.row-offcanvas-right .sidebar-offcanvas {
+		right: -50%; /* 6 columns */
+	}
+
+	.row-offcanvas-left .sidebar-offcanvas {
+		left: -50%; /* 6 columns */
+	}
+
+	.row-offcanvas-right.active {
+		right: 50%; /* 6 columns */
+	}
+
+	.row-offcanvas-left.active {
+		left: 50%; /* 6 columns */
+	}
+
+	.sidebar-offcanvas {
+		position: absolute;
+		top: 0;
+		width: 50%; /* 6 columns */
+	}
+}
+
+.sidebar-offcanvas
+	.list-group > .active > a,
+	.list-group > .active > a:hover,
+	.list-group > .active > a:focus {
+		color: #fff;
+		background-color: #428bca;
+	}
+
+	.list-group-item
+		padding 0
+
+// What is this?
+.gm-style-iw
+	&: > div
+		overflow hidden !important
+	img
+		max-width 300px
+		display block
+
+button[data-toggle="offcanvas"]
+	margin-left: -10px
+	margin-right: 5px
+
+// NAV /////////////////////////////////////////////////////////////////////////
+body
+	padding-top: 70px
+
+	
+.navbar-inverse
+	li, div
+		&:hover > a, &:focus > a, &.active > a
+			color #BAF !important
+
+
+// FOOTER //////////////////////////////////////////////////////////////////////
+html
+	position: relative
+	min-height: 100%
+
+body
+	margin-bottom: 50px
+
+footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	padding: 20px
+	height: 40px
+	color: white;
+	background: repeating-linear-gradient(
+		45deg,
+		#222,
+		#222 10px,
+		#BAF 10px,
+		#BAF 20px
+	);
+	text-align: center
+
+
+// TOAST MESSAGE COLORIZING ////////////////////////////////////////////////////
+.toast-item
+	a
+		color: #55F
+	b
+		color: #5F5
+	i
+		font-style: normal
+		color: #A8F
+	p img
+		width 50px
+		margin-right: 10px
+
+// HOME ////////////////////////////////////////////////////////////////////////
+#me
+	border-radius: 10px
+
+
+// GALLERY /////////////////////////////////////////////////////////////////////
+.gallery
+
+	img
+		vertical-align: top
+		display inline-block
+		width: 300px
+		margin: 5px

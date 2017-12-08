@@ -1,0 +1,22 @@
+.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+	.container
+		.navbar-header(class=req.path=='/'&&'active')
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href='/') Micah Lamb
+		.navbar-collapse.collapse
+
+			ul.nav.navbar-nav
+				li()
+					a(href='resume') Resume
+				li(class=req.path=='/graphics'&&'active')
+					a(href='graphics') Graphics
+				li()
+					a(href='//date.micahdlamb.com') Dating Site
+				li()
+					a(href='//github.com/micahdlamb') Github
+
+			ul.nav.navbar-nav.navbar-right

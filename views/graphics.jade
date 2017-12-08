@@ -1,0 +1,88 @@
+extends layout
+
+block content
+	include gallery
+	.container-fluid
+		.row.row-offcanvas.row-offcanvas-left
+			
+			.col-xs-6.col-sm-2.sidebar-offcanvas
+				ul.nav.list-group(role='tablist')
+					li.list-group-item.active
+						a(href='#pics', role='tab', data-toggle='tab') Pics
+					li.list-group-item
+						a(href='#exes', role='tab', data-toggle='tab') Exe Demos
+					li.list-group-item
+						a(href='/skin.pdf') Realistic Skin Paper
+
+
+			.col-xs-12.col-sm-10
+				p.pull-left.visible-xs
+					button.btn.btn-primary.btn-xs(type='button', data-toggle='offcanvas', onclick="$('.row-offcanvas').toggleClass('active')") Toggle nav
+				
+				div.tab-content
+					//Pics
+					div.tab-pane.fade.in.active.gallery#pics
+						div.row
+							a(href="img/robot.jpg", title="Ray Traced Robot", data-gallery)
+								img(src="img/robot.jpg")
+
+							a(href="img/marble.jpg", title="Marble Like Pattern", data-gallery)
+								img(src="img/marble.jpg")
+
+							a(href="img/warpy-earth.jpg", title="Warpy Earth", data-gallery)
+								img(src="img/warpy-earth.jpg")
+
+							a(href="img/volume-box.jpg", title="Volume Rendered Box", data-gallery)
+								img(src="img/volume-box.jpg")
+
+							a(href="img/tree.jpg", title="Volume Rendered Tree", data-gallery)
+								img(src="img/tree.jpg")
+
+							a(href="img/chest.jpg", title="Volume Rendered Chest", data-gallery)
+								img(src="img/chest.jpg")
+
+							a(href="img/painted-cow.jpg", title="3D Painting", data-gallery)
+								img(src="img/painted-cow.jpg")
+
+							a(href="img/reflecting-cows.jpg", title="Reflecting Cows", data-gallery)
+								img(src="img/reflecting-cows.jpg")
+
+							a(href="img/soft-shadows.jpg", title="Soft Shadows", data-gallery)
+								img(src="img/soft-shadows.jpg")
+
+							a(href="img/collision.jpg", title="Very Basic Collision Detection", data-gallery)
+								img(src="img/collision.jpg")
+
+							a(href="img/fireworks.jpg", title="Transform Feedback Particles", data-gallery)
+								img(src="img/fireworks.jpg")
+
+							a(href="img/bouncing-balls.jpg", title="Transform Feedback Particles", data-gallery)
+								img(src="img/bouncing-balls.jpg")
+
+							a(href="img/reflecting-water.jpg", title="Reflecting Water", data-gallery)
+								img(src="img/reflecting-water.jpg")
+
+							a(href="img/gpu-ray-tracing.jpg", title="GPU Ray Tracing", data-gallery)
+								img(src="img/gpu-ray-tracing.jpg")
+
+							a(href="img/refraction.jpg", title="GPU Ray Tracing", data-gallery)
+								img(src="img/refraction.jpg")
+
+							a(href="img/glass-balls.png", title="GPU Ray Traced Glass Balls", data-gallery)
+								img(src="img/glass-balls.png")
+
+							a(href="img/bspline.jpg", title="B-Spline", data-gallery)
+								img(src="img/bspline.jpg")
+
+							a(href="img/mushroom.png", title="Mushroom", data-gallery)
+								img(src="img/mushroom.png")
+
+							a(href="img/B-6blurs-200worldScale.png", title="Realistic Skin Rendering", data-gallery)
+								img(src="img/B-6blurs-200worldScale.png")
+
+							a(href="img/spec.png", title="Skin Specular Reflection", data-gallery)
+								img(src="img/spec.png")
+
+					//Demos
+					div.tab-pane.fade#exes
+						a(href='opengl-demos.zip') download

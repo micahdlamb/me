@@ -1,0 +1,15 @@
+-withouts are just the normal phong shading
+-6blurs means the 6 gaussian blurs were each blurred 6 times.  The first time their input came from the irradiance texture and the other 5 times they fed back into themselves.
+-200worldScale means I'm assuming 200 world units go into 1 meter.  So a bigger number makes the gaussian samples farther apart so its as though light diffuses farther.  The head model had a bounding sphere radius of 15 and my head has a radius of around 10cm? so that would make an accurate value be around 150.
+
+fresnel.png: shows the fresnel component of the BRDF.  Basically it goes to 1 at a grazing angle and is near 0 everywhere else.
+
+rho_s.png: just that skin_spec.dds texture drawn on the face.  More white means more specular.
+
+stretch.png:
+the red component is 1 / world distance change per pixel along x direction in textures
+the green component is 1 / world distance change per pixel along y direction in textures
+
+spec.png: this shows the specular reflection becoming visible at grazing angles.  Also I messed around and got a mediocre skin bump mapping effect using some texture I found online.
+
+screen cast video at: http://www.screenr.com/8Ua7
